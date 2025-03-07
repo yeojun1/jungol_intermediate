@@ -23,7 +23,7 @@ def quickSort(low, high):
     # 피벗을 최종적으로 정렬된 위치로 이동
     A[left], A[high] = A[high], A[left]
 
-    print(*A)  # 현재 리스트 상태 출력
+    print(*A)
 
     quickSort(low, left - 1)  # 왼쪽 부분 정렬
     quickSort(left + 1, high)  # 오른쪽 부분 정렬
