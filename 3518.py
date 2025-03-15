@@ -1,8 +1,7 @@
 N=int(input())
-A=list(map(int, input().split()))
+a=list(map(int, input().split()))
 
-def quickSort(low,high):
-    global A,N
+def quickSort(A,low,high):
     pivot=N-1
     while True:
         while A[low]>=A[pivot]: low+=1
@@ -17,7 +16,7 @@ def quickSort(low,high):
         return
     else:
         mid=int(N/2)
-        quickSort(0,mid)
-        quickSort(mid+1, N-1)
+        quickSort(A,0,mid)
+        quickSort(A,mid+1, N-1)
 
-quickSort(0, N-1)
+quickSort(a,0, N-1)
